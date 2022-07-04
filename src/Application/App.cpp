@@ -17,6 +17,8 @@ void App::notify(sf::Mouse::Button mouse, sf::Vector2i& pos, bool clicked) {
     if(mouse == sf::Mouse::Button::Left && clicked) {
         m_masse.m_pos.x = float(pos.x);
         m_masse.m_pos.y = float(pos.y);
+        m_masse.m_vit.x = 0;
+        m_masse.m_vit.y = 0;
     }
 }
 
