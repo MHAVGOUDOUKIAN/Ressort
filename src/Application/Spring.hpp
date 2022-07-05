@@ -7,27 +7,19 @@
 
 class Spring : public sf::Drawable {
     public:
-        Spring();
+        Spring(Masse* m_m1, Masse* m_m2, float k, float lo);
         ~Spring();
         void update(sf::Time deltaTime);
         void draw(sf::RenderTarget& target, sf::RenderStates states) const;
-        
-        void setPosInit(float x, float y);
-        void setPosFinal(float x, float y);
-        void setk(float);
-        void setlo(float);
-        const sf::Vector2f& posInit(void);
-        const sf::Vector2f& posFinal(void);
-        float k();
-        float lo();
 
     public:
         float m_k;
         float m_lo;
+        Masse* m_m1;
+        Masse* m_m2;
         
-        Masse m_mass;
-        Support m_support;
-        sf::RectangleShape m_shape;
+        
+        sf::VertexArray m_vertex;
 };
 
 #endif

@@ -51,7 +51,7 @@ set( HEADERS
     Application/App.hpp
     Application/Masse.hpp
     Application/Support.hpp
-    Application/Spring.cpp
+    Application/Spring.hpp
     Application/utils.hpp
     Application/Resolver.hpp
 )

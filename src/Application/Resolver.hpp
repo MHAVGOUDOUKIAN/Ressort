@@ -6,10 +6,12 @@
 #include <Application/Support.hpp>
 #include <Engine/GUILogger.hpp>
 #include <glm/glm.hpp>
+#include <Application/Spring.hpp>
 
 class Resolver {
     public:
-        static void resolve(Masse&, const Support&, sf::Time);
+        static void resolveSpring(Spring*);
+        static void resolveGravity(Masse*);
 };
 
 #endif

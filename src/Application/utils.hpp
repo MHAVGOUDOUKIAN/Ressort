@@ -127,15 +127,13 @@ inline bool crossingLines(sf::Vector2f& p11, sf::Vector2f& p12, sf::Vector2f& p2
     float cd1, cd2; // Coef directeur des droites (p11 p12) et (p21 p22)
 
     /* Cas ou un des segments est vertical */
-    if(p11.y == p12.y)
-    {
+    if(p11.y == p12.y) {
         if(p11.y >= std::min(p21.y, p22.y) && p11.y <= std::max(p21.y, p22.y) && std::max(p11.x,p12.x) >= std::min(p21.x, p22.x) && std::max(p21.x,p22.x) >= std::min(p11.x, p12.x)) {
             return true;
         }
         return false;
     }
-    else if(p21.y == p22.y)
-    {
+    else if(p21.y == p22.y) {
         if(p21.y >= std::min(p11.y, p12.y) && p21.y <= std::max(p11.y, p12.y) && std::max(p21.x,p22.x) >= std::min(p11.x, p12.x) && std::max(p11.x,p12.x) >= std::min(p21.x, p22.x)) {
             return true;
         }

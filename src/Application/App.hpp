@@ -10,6 +10,7 @@
 #include <Application/Masse.hpp>
 #include <Application/Support.hpp>
 #include <Application/Resolver.hpp>
+#include <Application/Spring.hpp>
 
 #include <vector>
 #include <iostream>
@@ -26,8 +27,8 @@ class App : public sf::Drawable, public MouseObserver, public KeyBoardObserver{
         virtual void notify(sf::Keyboard::Key key, bool pressed);
 
     private:
-        Masse m_masse;
-        Support m_support;
+        std::vector<Masse*> m_ms;
+        std::vector<Spring*> m_ss; 
 
 };
 

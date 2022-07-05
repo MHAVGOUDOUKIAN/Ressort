@@ -14,10 +14,9 @@ Engine::Engine(): m_window(sf::VideoMode(800,600), "Application SFML"), m_eventH
 }
 
 void Engine::run()
-{
+{   
     m_timer.add("Clock1");
     sf::Time timeSinceLastUpdate = m_timer.restart("Clock1");
-
     while (m_window.isOpen())
     {
         m_eventHandler->processEvents(m_window); // On détermine les actions relatives aux events à exécuter à la prochaine frame
@@ -26,6 +25,7 @@ void Engine::run()
         {
             m_eventHandler->processEvents(m_window); // On détermine les actions relatives aux events à exécuter à la prochaine frame
             timeSinceLastUpdate -= m_timePerFrame;
+            
             update(m_timePerFrame);
         }
         render();

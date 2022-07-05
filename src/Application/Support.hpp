@@ -6,6 +6,7 @@
 class Support : public sf::Drawable {
     public:
         Support();
+        Support(int x, int y);
         ~Support();
         void draw(sf::RenderTarget& target, sf::RenderStates states) const;
         
