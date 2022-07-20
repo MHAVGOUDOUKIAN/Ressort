@@ -20,13 +20,13 @@ void Resolver::resolve(Masse& m, const Support& s, sf::Time deltaTime){ // Suppo
      * lo = longueur à vide
      * m= masse
      * g= intensité de pesanteur
-     * f = coef de frottement à l'air 
+     * f = coef d'amortissement
      */
     float k=200.0f;
     float x=long_spring-150.f;
     float kg=15.f;
     float g=9.8f*100.f;
-    float f=0.85f;
+    float f=0.75f;
 
     m.m_acc.x = -((k*x*glm::sin(angle))/kg) - m.m_vit.x*f;
     m.m_acc.y = -((k*x*glm::cos(angle))/kg) + g - m.m_vit.y*f;
